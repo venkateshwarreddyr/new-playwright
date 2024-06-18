@@ -9,8 +9,6 @@ test.describe("Login test", () => {
   test("the user enters an invalid username and password", async ({ page }) => {
     // An object with page and test must be passed into every call
     const aiArgs = { page, test };
-    const headerText = await ai("Get the header text", aiArgs);
-    await page.goto("https://google.com/");
     await ai(`Type "${"user3"}" in the username box`, aiArgs);
     await ai(`Type "${"password3"}" in the password3 box`, aiArgs);
   });
